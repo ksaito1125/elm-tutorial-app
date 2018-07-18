@@ -5,6 +5,10 @@ run:
 setup: install-elm install-node install-yarn
 	yarn
 
+reactor:
+	node api.js &
+	elm reactor -a 0.0.0.0
+
 install-elm:
 	sudo -E apt update
 	sudo -E apt install -y npm
